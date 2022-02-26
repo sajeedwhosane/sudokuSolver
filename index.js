@@ -9,7 +9,7 @@ const title = document.getElementById('title');
 //column values and 
 //square values to check if they are not the same.
 var sudokuBoard=[[0,1,0,0,0,7,8,5,6],
-                 [7,8,6,0,1,5,0,0,4],
+                 [7,8,6,0,1,5,0,0,4,0],
                  [4,0,0,0,8,3,0,1,0],
                  [0,0,0,1,0,2,0,6,0],
                  [2,0,0,0,9,0,0,7,0],
@@ -53,7 +53,6 @@ let getColValues=(board,col)=>{
                     }
                     return colValues;
 }
-document.write(getColValues(sudokuBoard,1));
 
 
 //getBoardValues
@@ -72,4 +71,33 @@ let getBoardValues=(board,row,col)=>{
                         console.log(gridValues);
                         console.log(gridRow,gridCol);
 }
+
+
 getBoardValues(sudokuBoard,3,4);
+
+
+// function to check if the given sudoku is valid or not
+
+let checkBoard=(board)=>{
+    //getting number of rows and columns 
+                let boardClen=board.length;
+                let boardRlen=board[0].length;
+                console.log(`number of rows:${boardRlen}`);
+                console.log(`number of cols:${boardClen}`);
+    //check if the rows and columns can be divided by 3
+                if((boardClen%3)!==0 || (boardRlen%3)!==0){
+                    console.log("not a valid board");
+                    return;
+                }else{
+                    for(let i=0;i<boardClen;i++){
+                        let len=board[i].length;
+                        if(len!== boardClen){
+                            console.log("not a valid board, it is not a nXn board");
+                            return;
+                        }
+                        
+                    }
+                }
+
+}
+checkBoard(sudokuBoard);
