@@ -119,9 +119,17 @@ let solveBoard=(board)=>{
                 // iterate through every value in the given multid array.
                 // check if there is any value with 0 i,e, unassigned
                 // if unassigned
-                // check for possible values.
-                    //iterate through those values
-                    // assign one of the possible values
-                    // check if the value assigned is according to the constraints i.e, no same value in row, col or grid.
-                    // if value assigned is not same then go back and assign a different value.
+                // take the row and column values of that cell and add it to an array emptyCells
+                // make sure to get all the unassigned values.
+                //then iterate through those positions
+                        // the function should take the board and the array emptyCells as arguments.
+                        // iterate through the emptyCells array
+                     //solveBoard- function should take board, empty cells position from the array.   
+                    // check for possible values.
+                        //iterate through those values
+                        // assign one of the possible values
+                        // check if the value assigned is according to the constraints i.e, no same value in row, col or grid.
+                        // if value assigned is not valid then go back and assign a different value.
+                    // if all the possible values are invalid, then backtrack to the previous cell and assign a different value than the previous one
+                // if there are no empty cells left then return the solved board.    
 }
