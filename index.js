@@ -107,6 +107,21 @@ let checkBoard=(board)=>{
                     }
 
                 }
+            // the board has passed all the checks
+            console.log("Board is Valid");
+             return true;   
 
 }
 checkBoard(sudokuBoard);
+
+
+let solveBoard=(board)=>{
+                // iterate through every value in the given multid array.
+                // check if there is any value with 0 i,e, unassigned
+                // if unassigned
+                // check for possible values.
+                    //iterate through those values
+                    // assign one of the possible values
+                    // check if the value assigned is according to the constraints i.e, no same value in row, col or grid.
+                    // if value assigned is not same then go back and assign a different value.
+}
