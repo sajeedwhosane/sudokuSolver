@@ -9,7 +9,7 @@ const title = document.getElementById('title');
 //column values and 
 //square values to check if they are not the same.
 var sudokuBoard=[[0,1,0,0,0,7,8,5,6],
-                 [7,8,6,0,1,5,0,0,4,0],
+                 [7,8,6,0,1,5,0,0,4],
                  [4,0,0,0,8,3,0,1,0],
                  [0,0,0,1,0,2,0,6,0],
                  [2,0,0,0,9,0,0,7,0],
@@ -95,8 +95,17 @@ let checkBoard=(board)=>{
                             console.log("not a valid board, it is not a nXn board");
                             return;
                         }
-                        
                     }
+                    //checks for values that are greater than 9
+                    for(let i=0;i<boardClen;i++){
+                        for(const cell of board[i]){
+                            if(cell>9){
+                                console.log("Invalid values in the puzzle, the value of a cell is greater than 9");
+                                return;
+                            }
+                        }
+                    }
+
                 }
 
 }
