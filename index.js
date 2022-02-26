@@ -99,7 +99,7 @@ let checkBoard=(board)=>{
                     //checks for values that are greater than 9
                     for(let i=0;i<boardClen;i++){
                         for(const cell of board[i]){
-                            if(cell>9){
+                            if(cell>boardClen){
                                 console.log("Invalid values in the puzzle, the value of a cell is greater than 9");
                                 return;
                             }
